@@ -1,0 +1,259 @@
+@import "mixins";
+
+.header {
+    background-image: url("../images/bg-header-desktop.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    display: flex;
+    flex-direction: column;
+    padding-top: 13rem;
+    align-items: center;
+    min-height: 85vh;
+    text-align: center;
+    // padding-top: 13rem;
+    // text-align: center;
+
+    &__text {
+        @include txt;
+        width: 45%;
+        @media only screen and (max-width: $bp-big) {
+            width: 70%;
+        }
+    }
+
+
+    &__buttons {
+        display: flex;
+    }
+}
+
+.buttons {
+    &__btn {
+        font-size: 1.8rem;
+        border: none;
+        color: white;
+        padding: 1.5rem 4.2rem;
+        border-radius: 3rem;
+        margin-top: 6rem;
+        cursor: pointer;
+        transition: all .2s;
+        &--cyan {
+            background-color: $color-strong-cyan;
+            box-shadow: 0 2px 15px $color-strong-cyan;
+            margin-right: 1.5rem;
+
+            &:hover {
+                background-color: rgba($color-strong-cyan, 0.8);
+            }
+        }
+
+        &--blue {
+            background-color: $color-light-blue;
+            box-shadow: 0 2px 15px $color-light-blue;
+
+            &:hover {
+                background-color: rgba($color-light-blue, 0.8);
+            }
+        }
+    }
+}
+
+.features {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+    &__storage {
+        width: 50%;
+        @media only screen and (max-width: $bp-big) {
+            width: 70%;
+        }
+    }
+
+    &__text {
+        @include txt;
+    }
+
+    &__text--narrower {
+        margin-right: 18rem;
+        @media only screen and (max-width: $bp-large) {
+            margin-right: 4rem;
+        }
+    }
+
+    &__items {
+        display: flex;
+
+        margin: 10rem 0 20rem;
+    }
+
+    &__items-column {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        text-align: start;
+        width: 50%;
+        margin-bottom: 5rem;
+        margin-left: 5rem;
+    }
+
+    &__img-container {
+        width: 75%;
+    }
+
+    &__img {
+        width: 100%;
+        // height: 100%;
+        transform: translateX(-6rem);
+
+        // @media only screen and (max-width: $bp-large) {
+        //     width: 70%;
+        // }
+    }
+}
+
+.accessibility {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 10rem;
+
+    &__text {
+        @include txt;
+        width: 50%;
+        @media only screen and (max-width: $bp-big) {
+            width: 70%;
+        }
+    }
+
+    &__img {
+        width: 65%;
+        margin-top: 10rem;
+    }
+}
+
+.benefits {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    &__text {
+        @include txt;
+    }
+
+    &__items {
+        display: flex;
+        justify-content: space-around;
+        width: 85%;
+        margin: 8rem 0 20rem;
+    }
+
+    &__item-1 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        flex-basis: 33.33%;
+    }  
+    &__item-2 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        flex-basis: 33.33%;
+    }
+    &__item-3 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        flex-basis: 33.33%;
+    }
+
+    &__img {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-end;
+        width: 20%;
+        height: 4.5vw;
+        margin-bottom: 4rem;
+    }
+
+}
+
+.logos {
+    display: flex;
+    justify-content: space-around;
+    margin: 0 6rem 20rem;
+
+    img {
+        display: block;
+        width: 13%;
+        align-self: center;
+    }
+}
+
+.download {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+    &__text {
+        @include txt;
+        width: 50%;
+        @media only screen and (max-width: $bp-big) {
+            width: 70%;
+        }
+    }
+}
+
+.footer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 15vh;
+    background-color: $color-grayish-blue;
+    flex-wrap: wrap;
+    margin-top: 20rem;
+
+    &__img {
+        width: 4%;
+    }
+
+    &__table {
+        width: 40%;
+        list-style: none;
+        justify-content: space-between;
+        margin-right: 10rem;
+        line-height: 2;
+
+        a {
+            font-size: 1.8rem;
+            text-decoration: none;
+            color: $color-dark-grayish-blue;
+            cursor: pointer;
+            transition: all .3s;
+        }
+
+        a:hover {
+            color: $color-strong-cyan;
+        }
+
+    }
+}
+
+.socials {
+
+    &__icon {
+        transition: all .3s;
+        fill:#4C545C;
+        margin-right: 2rem;
+
+        &:hover{
+            fill: $color-strong-cyan;
+        }
+    }
+
+}
