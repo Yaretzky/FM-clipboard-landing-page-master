@@ -8,16 +8,28 @@
     flex-direction: column;
     padding-top: 13rem;
     align-items: center;
-    min-height: 85vh;
+    min-height: 75vh;
     text-align: center;
-    // padding-top: 13rem;
-    // text-align: center;
+    margin-bottom: 8rem;
+
+    @media only screen and (max-width: $bp-big) {
+    }
+
+    @media only screen and (max-width: $bp-medium) {
+        background-image: url("../images/bg-header-mobile.png");
+        background-size: contain;
+        margin-bottom: 7rem;
+    }
 
     &__text {
         @include txt;
         width: 45%;
         @media only screen and (max-width: $bp-big) {
             width: 70%;
+        }
+
+        @media only screen and (max-width: $bp-small) {
+            width: 75%;
         }
     }
 
@@ -28,6 +40,13 @@
 }
 
 .buttons {
+
+    display: flex;
+
+    @media only screen and (max-width: $bp-medium) {
+        flex-direction: column;
+    }
+
     &__btn {
         font-size: 1.8rem;
         border: none;
@@ -37,10 +56,20 @@
         margin-top: 6rem;
         cursor: pointer;
         transition: all .2s;
+
+        @media only screen and (max-width: $bp-medium) {
+            margin-top: 3rem;
+            padding: 1.5rem 10.2rem;
+        }
+
         &--cyan {
             background-color: $color-strong-cyan;
             box-shadow: 0 2px 15px $color-strong-cyan;
             margin-right: 1.5rem;
+            
+            @media only screen and (max-width: $bp-medium) {
+                margin-top: 7rem;
+            }
 
             &:hover {
                 background-color: rgba($color-strong-cyan, 0.8);
@@ -69,6 +98,15 @@
         @media only screen and (max-width: $bp-big) {
             width: 70%;
         }
+
+        @media only screen and (max-width: $bp-medium) {
+            width: 85%;
+        }
+
+        @media only screen and (max-width: $bp-small) {
+            width: 75%;
+        }
+        
     }
 
     &__text {
@@ -77,15 +115,49 @@
 
     &__text--narrower {
         margin-right: 18rem;
+
         @media only screen and (max-width: $bp-large) {
             margin-right: 4rem;
+        }
+
+        @media only screen and (max-width: $bp-medium) {
+            margin-right: 0;
         }
     }
 
     &__items {
         display: flex;
-
         margin: 10rem 0 20rem;
+
+        @media only screen and (max-width: $bp-medium) {
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 3rem;
+        }
+    }
+
+    &__item-1 {
+        margin-bottom: 1.5rem;
+
+        @media only screen and (max-width: $bp-medium) {
+            margin-top: 7rem;
+        }
+    }
+
+    &__item-2 {
+        margin-bottom: 1.5rem;
+
+        @media only screen and (max-width: $bp-medium) {
+            margin-top: 5rem;
+        }
+    }
+
+    &__item-3{
+        margin-bottom: 1.5rem;
+
+        @media only screen and (max-width: $bp-medium) {
+            margin-top: 5rem;
+        }
     }
 
     &__items-column {
@@ -94,22 +166,33 @@
         justify-content: space-around;
         text-align: start;
         width: 50%;
-        margin-bottom: 5rem;
+        margin-bottom: 10rem;
         margin-left: 5rem;
+
+        @media only screen and (max-width: $bp-medium) {
+            text-align: center;
+            margin-left: 0;
+            width: 75%;
+        }
     }
 
     &__img-container {
+        margin: 0 auto;
         width: 75%;
     }
 
     &__img {
         width: 100%;
-        // height: 100%;
         transform: translateX(-6rem);
 
-        // @media only screen and (max-width: $bp-large) {
-        //     width: 70%;
-        // }
+        @media only screen and (max-width: $bp-medium) {
+            transform: translateX(0);
+        }
+
+        @media only screen and (max-width: $bp-small) {
+            width: 110%;
+            transform: translateX(-5%);
+        }
     }
 }
 
@@ -126,11 +209,24 @@
         @media only screen and (max-width: $bp-big) {
             width: 70%;
         }
+
+        @media only screen and (max-width: $bp-medium) {
+            width: 85%;
+        }
+
+        @media only screen and (max-width: $bp-small) {
+            width: 75%;
+        }
     }
 
     &__img {
         width: 65%;
         margin-top: 10rem;
+
+        @media only screen and (max-width: $bp-small) {
+            width: 90%;
+            margin-top: 7rem;
+        }
     }
 }
 
@@ -138,8 +234,15 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+
+
     &__text {
         @include txt;
+
+        @media only screen and (max-width: $bp-small) {
+            text-align: center;
+            width: 75%;
+        }
     }
 
     &__items {
@@ -147,6 +250,10 @@
         justify-content: space-around;
         width: 85%;
         margin: 8rem 0 20rem;
+
+        @media only screen and (max-width: $bp-medium) {
+            flex-direction: column;
+        }
     }
 
     &__item-1 {
@@ -162,6 +269,7 @@
         align-items: center;
         text-align: center;
         flex-basis: 33.33%;
+        margin: 0 2rem;
     }
     &__item-3 {
         display: flex;
@@ -178,6 +286,12 @@
         width: 20%;
         height: 4.5vw;
         margin-bottom: 4rem;
+
+        @media only screen and (max-width: $bp-medium) {
+            margin-top: 4rem;
+            width: 13%;
+            height: 6.5vw;
+        }
     }
 
 }
@@ -187,10 +301,27 @@
     justify-content: space-around;
     margin: 0 6rem 20rem;
 
+    @media only screen and (max-width: $bp-medium) {
+        justify-content: center;
+        width: 80%;
+        flex-wrap: wrap;
+        gap: 8rem;
+        justify-self: center;
+    }
+
+
     img {
         display: block;
         width: 13%;
         align-self: center;
+
+        @media only screen and (max-width: $bp-medium) {
+            width: 35%;
+        }
+
+        @media only screen and (max-width: $bp-small) {
+            width: 45%;
+        }
     }
 }
 
@@ -206,6 +337,14 @@
         @media only screen and (max-width: $bp-big) {
             width: 70%;
         }
+
+        @media only screen and (max-width: $bp-medium) {
+            width: 85%;
+        }
+
+        @media only screen and (max-width: $bp-small) {
+            width: 75%;
+        }
     }
 }
 
@@ -215,19 +354,63 @@
     align-items: center;
     height: 15vh;
     background-color: $color-grayish-blue;
-    flex-wrap: wrap;
     margin-top: 20rem;
 
-    &__img {
-        width: 4%;
+    @media only screen and (max-width: $bp-medium) {
+        margin-top: 18rem;
+        flex-direction: column;
+        height: auto;
+        padding-top: 5rem;
     }
 
-    &__table {
+    &__img {
+        width: 6rem;
+        height: 6rem;
+        @media only screen and (max-width: $bp-medium) {
+            margin-bottom: 1.5rem;
+        }
+    }
+
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
         width: 40%;
         list-style: none;
-        justify-content: space-between;
         margin-right: 10rem;
         line-height: 2;
+        border-spacing: 1rem;
+
+
+        @media only screen and (max-width: $bp-medium) {
+            flex-direction: column;
+            flex-wrap: nowrap;
+            align-items: center;
+            width: 100%;
+            margin-right: 0rem;
+
+            li:nth-child(1) {
+                order: -4;
+            }
+            li:nth-child(4) {
+                order: -3;
+            }
+    
+            li:nth-child(2) {
+                order: -2;
+            }
+    
+            li:nth-child(5) {
+                order: -1;
+            }
+        }
+
+        li {
+            flex-basis: 33.33%;
+
+            @media only screen and (max-width: $bp-medium) {
+                margin-top: 2rem;
+            }
+        }
 
         a {
             font-size: 1.8rem;
@@ -251,9 +434,24 @@
         fill:#4C545C;
         margin-right: 2rem;
 
+        @media only screen and (max-width: $bp-medium) {
+            margin-right: 0;
+            margin-top: 4rem;
+            margin-bottom: 4rem;
+        }
+        
+
         &:hover{
             fill: $color-strong-cyan;
         }
+
+        &--2 {
+            @media only screen and (max-width: $bp-medium) {
+                margin-left: 6rem;
+                margin-right: 6rem;
+            }
+        }
+
     }
 
 }
